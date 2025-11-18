@@ -188,7 +188,7 @@ void PFE_WFS_simpleAudioProcessor::prepareToPlay (double sampleRate, int samples
     //=========== eq filter
     
     // get path to coefficients for eq filter
-    juce::File coefficientsFile ("C:/Users/astri/OneDrive/Documents/M2/PC WFS/plugin/PFE_WFS_simple_starter/Source/output.txt");//load your own path
+    juce::File coefficientsFile ("...");//load your own path
 
     // load the coefficients for eq filter
     std::vector<std::vector<float>> eqCoeffs = loadCoefficients(coefficientsFile.getFullPathName().toStdString());
@@ -208,7 +208,7 @@ void PFE_WFS_simpleAudioProcessor::prepareToPlay (double sampleRate, int samples
     //=========== fir filters (high pass and phase) 
     // 
     // Get the path of the coeff file for fir filter
-    juce::File coefficientsFir("C:/Users/astri/OneDrive/Documents/M2/PC WFS/plugin/PFE_WFS_simple_starter/Source/FIR_b_coeffs.txt"); // load your own path
+    juce::File coefficientsFir("..."); // load your own path
     //
     // Load the coefficients for fir filter
     std::vector<float> firCoeffs = loadFIRCoefficients(coefficientsFir.getFullPathName().toStdString());
@@ -363,3 +363,4 @@ juce::AudioProcessor* JUCE_CALLTYPE createPluginFilter()
 {
     return new PFE_WFS_simpleAudioProcessor();
 }
+
